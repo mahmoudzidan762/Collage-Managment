@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+        <menuitem id="collage_managment" name="Collage" sequence="0"/>
+        <menuitem id="doctor_sheet" name="Doctor Sheet" parent="collage_managment" action="action_doctor"/>
+        <menuitem id="inherit_op_faculty_menu" name="Faculties" parent="collage_managment" action="openeducat_core.act_open_op_faculty_view_2"/>
+        <menuitem id="inherit_op_student_menu" name="Students" parent="collage_managment" action="openeducat_core.act_open_op_student_view_2"/>
+        <menuitem id="inherit_op_subjects_menu" name="Subjects" parent="collage_managment" action="openeducat_core.act_open_op_subject_view"/>
+    </data>
+
+</odoo>

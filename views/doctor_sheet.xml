@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+    <!--    tree view temp-->
+    <record id="view_doctor_sheet_tree" model="ir.ui.view">
+        <field name="name">doctor.sheet.tree</field>
+        <field name="model">doctor.sheet</field>
+        <field name="arch" type="xml">
+            <tree string="Doctor Sheet">
+                <field name="doc_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <!--    form view temp-->
+    <record id="view_main_test_form" model="ir.ui.view">
+        <field name="name">doctor.sheet.form</field>
+        <field name="model">doctor.sheet</field>
+        <field name="arch" type="xml">
+            <form string="Doctor Sheet">
+                <sheet>
+                    <group>
+                        <field name="doc_id" groups="collage_managment.admin_access_id"/>
+                        <field name="doc_id2" groups="collage_managment.doctor_access_id"/>
+                        <field name="user_id" groups="collage_managment.admin_access_id"/>
+                        <field name="doc_subjects_domain" invisible="1"/>
+                        <field name="doc_subjects" domain="doc_subjects_domain"/>
+                    </group>
+                    <notebook>
+                        <page name="Sheet">
+                            <field name="doctor_sheet">
+                                <tree string="Sheet" editable="bottom">
+                                    <field name="students_domain" column_invisible="1"/>
+                                    <field name="students_name" domain="students_domain"/>
+                                    <field name="mid_term_exam"/>
+                                    <field name="practical_exam"/>
+                                    <field name="final_exam"/>
+                                    <field name="total_practical_marks"/>
+                                    <field name="total_theoretical_marks"/>
+                                    <field name="total_marks"/>
+                                    <field name="percentage"/>
+                                    <field name="grade"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!--    action temp-->
+    <record id="action_doctor" model="ir.actions.act_window">
+        <field name="name">Doctor Sheet</field>
+        <field name="res_model">doctor.sheet</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first Test!
+            </p>
+        </field>
+    </record>
+
+
+</odoo>
+

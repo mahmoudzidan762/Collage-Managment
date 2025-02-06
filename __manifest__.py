@@ -1,0 +1,27 @@
+{
+    'name': 'CollageManagment',
+    'summary': 'This Module For Collage',
+    'license': 'AGPL-3',
+    'category': 'Extra Tools',
+    'sequence': '13',
+    'depends': [
+        'base',
+        'openeducat_erp',
+        'openeducat_admission',
+        'openeducat_assignment',
+        'openeducat_attendance',
+        'openeducat_library',
+        'openeducat_parent',
+        'openeducat_exam',
+        'web_openeducat',
+    ],
+    'demo': [],
+    'data': [
+        'security/security_rules.xml',
+        'security/ir.model.access.csv',
+        'views/doctor_sheet.xml',
+        'views/inherit_op_student.xml',
+        'views/inherit_op_subject.xml',
+        'views/menus.xml',
+    ],
+}

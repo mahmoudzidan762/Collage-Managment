@@ -1,0 +1,30 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="inherit_op_student_view_form">
+            <field name="name">inherit.op.student.view.form</field>
+            <field name="model">op.student</field>
+            <field name="inherit_id" ref="openeducat_core.view_op_student_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form//sheet" position="inside">
+                    <group>
+                        <field name="doctor_subject">
+                            <tree string="Subjects" editable="bottom">
+                                <field name="subject_name"/>
+                                <field name="doctor_name_domain" column_invisible="1"/>
+                                <field name="doctor_name" domain="doctor_name_domain"/>
+                                <field name="mid_term_exam" readonly="1"/>
+                                <field name="practical_exam" readonly="1"/>
+                                <field name="final_exam" readonly="1"/>
+                                <field name="total_practical_marks" readonly="1"/>
+                                <field name="total_theoretical_marks" readonly="1"/>
+                                <field name="total_marks" readonly="1"/>
+                                <field name="percentage" readonly="1"/>
+                                <field name="grade" readonly="1"/>
+                            </tree>
+                        </field>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
